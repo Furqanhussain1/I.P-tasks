@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental System</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Car Rental System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cars</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+
+    <section class="container my-5">
+        <div class="row">
+
+            <!-- Car Card 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="/sedan.jpg" class="card-img-top" alt="Sedan">
+                    <div class="card-body">
+                        <h5 class="card-title">Sedan</h5>
+                        <p class="card-text">A comfortable and spacious sedan for your travel needs.</p>
+                        <p class="card-text">Category: Sedan</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="/v8.jpg" class="card-img-top" alt="V8">
+                    <div class="card-body">
+                        <h5 class="card-title">V8</h5>
+                        <p class="card-text">A powerful sedan with V8 engine for your travel needs.</p>
+                        <p class="card-text">Category: Toyota</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="/civic.jpg" class="card-img-top" alt="Honda Civic">
+                    <div class="card-body">
+                        <h5 class="card-title">Honda Civic</h5>
+                        <p class="card-text">A sporty and reliable sedan for your travel needs.</p>
+                        <p class="card-text">Category: Honda</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <select class="form-control mr-sm-2" id="carCategory">
+                <option value="all">All Categories</option>
+                <option value="sedan">Sedan</option>
+                <option value="toyota">Toyota</option>
+                <option value="honda">Honda</option>
+            </select>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </section>
+
+
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2023 Car Rental System. All rights reserved.</p>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

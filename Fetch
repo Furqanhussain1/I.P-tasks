@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Information</title>
+</head>
+<body>
+    <h1>Pakistan Information</h1>
+
+    <div id="flag"></div>
+    <div id="language"></div>
+    <div id="provinces"></div>
+    <div id="primeMinister"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+           
+            fetch('https://restcountries.com/v3.1/name/pakistan')
+                .then(response => response.json())
+                .then(data => {
+                    const country = data[0];
+
+                    
+                    const flagElement = document.getElementById('flag');
+                    flagElement.innerHTML = <img src="${country.flags.svg}" alt="Flag of Pakistan" width="100">;
+
+                    
+                    const languageElement = document.getElementById('language');
+                    const languages = country.languages.map(lang => lang.name).join(', ');
+                    languageElement.textContent = Languages: ${languages};
+
+                    
+                    const provincesElement = document.getElementById('provinces');
+                    const provinces = country.subdivisions.map(subdivision => subdivision.name).join(', ');
+                    provincesElement.textContent = Provinces: ${provinces};
+
+                    
+                    const primeMinisterElement = document.getElementById('primeMinister');
+                    primeMinisterElement.textContent = Prime Minister: ${country.headsOfGovernment[0]?.name || 'N/A'};
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
+</body>
+</html>
